@@ -6,7 +6,7 @@ AutoItSetOption("WinTitleMatchMode", 3) ; EXACT_MATCH!
 ;             PSM AutoIt Dispatcher
 ;============================================================
 #include "PSMGenericClientWrapper.au3"
-#include <WinAPIFiles.au3>
+;#include <WinAPIFiles.au3>
 #include <String.au3>
 
 ;=======================================
@@ -62,7 +62,7 @@ Func Main()
 	
     ; Launch powershell script
 	;Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $fileName, "", @SW_HIDE)
-	Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $HexPath & ' ' & $HexPassword , "", @SW_HIDE)
+	Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $HexPath & ' ' & $HexPassword & ' ' & 'writexml'  , "", @SW_HIDE)
 
 	; Sleep for 3 seconds
 	Sleep(3000)
@@ -77,7 +77,7 @@ Func Main()
 	Sleep(10000)
 	
 	; Delete the xml file
-	FileDelete($XMLFile)
+	Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $HexPath & ' ' & $HexPassword & ' ' & 'writexml'  , "", @SW_HIDE)
 	
 	
 	
