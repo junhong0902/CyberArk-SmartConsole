@@ -62,7 +62,7 @@ Func Main()
 	
     ; Launch powershell script
 	;Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $fileName, "", @SW_HIDE)
-	Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $HexPath & ' ' & $HexPassword & ' ' & 'writexml'  , "", @SW_HIDE)
+	Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $HexPath & ' ' & $HexPassword & ' ' & 'createxml'  , "", @SW_HIDE)
 
 	; Sleep for 3 seconds
 	Sleep(3000)
