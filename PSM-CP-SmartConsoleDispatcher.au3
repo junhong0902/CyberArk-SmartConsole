@@ -77,7 +77,7 @@ Func Main()
 	Sleep(10000)
 	
 	; Delete the xml file
-	Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $HexPath & ' ' & $HexPassword & ' ' & 'writexml'  , "", @SW_HIDE)
+	Run('powershell.exe -File ' & '"' & $PS_EXECUTABLE & '" ' & $TargetUsername & ' ' & $TargetAddress & ' ' & $HexPath & ' ' & $HexPassword & ' ' & 'deletexml'  , "", @SW_HIDE)
 	
 	
 	
