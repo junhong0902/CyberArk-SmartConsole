@@ -31,6 +31,7 @@ function hextostring
     # Return result
     return (-join $hex)
 }
+
 switch($strActionName)
 {
 	'createxml'
