@@ -60,3 +60,7 @@ $objXmlWriter.WriteEndDocument()
 $objXmlWriter.Flush()
 $objXmlWriter.Close()
 
+# Wait 10 sec for autoIT to load the xml and delete it after. Delete recursively to make sure the folder is empty
+Sleep(10)
+write-host (get-item $smartConsoleFile).Directory.FullName
+get-childitem (get-item $smartConsoleFile).Directory.FullName -include *.xml -recurse | remove-item -Force -Recurse
